@@ -1,8 +1,9 @@
 package SaturdayProject;
 
+import UtilityClass.DriverClass;
 import org.testng.annotations.Test;
 
-public class Orange {
+public class Orange extends DriverClass {
 
     @Test
     void IdTest_1(){
@@ -30,6 +31,7 @@ public class Orange {
 
     @Test
     void IdTest_5(){
+
 
 
     }
