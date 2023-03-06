@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="">
+        <classes>
+            <class name="SaturdayProject.Orange">
+                <methods>
+                    <include name="IdTest_1"/>
+                    <include name="IdTest_2"/>
+                    <include name="IdTest_3"/>
+                    <include name="IdTest_4"/>
+                    <include name="IdTest_5"/>
+                    <include name="IdTest_6"/>
+                    <include name="IdTest_7"/>
+                    <include name="IdTest_8"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
