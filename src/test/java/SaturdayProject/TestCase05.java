@@ -2,7 +2,6 @@ package SaturdayProject;
 
 import UtilityClass.DriverClass;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -32,7 +31,7 @@ import java.time.Duration;
  You will be able to browse your local machine for images
  The file name is selected in the "Choose a file" box
  The file gets uploaded and the older image is replaced*/
-public class TestCase11 extends DriverClass {
+public class TestCase05 extends DriverClass {
 
     @Test
     void uploadPhotographTest() throws AWTException {
