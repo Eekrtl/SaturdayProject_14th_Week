@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.awt.*;
@@ -89,18 +90,38 @@ public class Orange extends DriverClass {
         WebElement chooseAFile=driver.findElement(By.xpath("(//img[@alt=\"profile picture\"])[3]"));
         chooseAFile.click();
 
-        StringSelection stringSelection = new StringSelection("/Users/eybulkartal/Desktop/jpg_44.webp");
+        StringSelection stringSelection = new StringSelection("C:\\Users\\umtcn\\OneDrive\\Desktop\\sadsadasdsadsadasd.jpg");
+
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(stringSelection, stringSelection);
         wait(2);
-
-        robot.keyPress(KeyEvent.VK_TAB);
-//        robot.keyRelease(KeyEvent.VK_ENTER);
         robot.keyPress(KeyEvent.VK_CONTROL);
         robot.keyPress(KeyEvent.VK_V);
 
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        wait(2);
+
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
 //        robot.keyPress(KeyEvent.VK_ENTER);
 //        robot.keyRelease(KeyEvent.VK_ENTER);
+        WebDriverWait Wait1= new WebDriverWait(driver,Duration.ofSeconds(30));
+
+
+        Wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
+        WebElement submit = driver.findElement(By.xpath("//button[@type='submit']"));
+
+
+
+        submit.click();
+
+        WebElement redAlert = driver.findElement(By.xpath("//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message']"));
+        String Actualtext =redAlert.getText();
+
+        String ExpectedText = "Attachment Size Exceeded";
+
+        Assert.assertEquals(Actualtext,ExpectedText);
 
 
 
