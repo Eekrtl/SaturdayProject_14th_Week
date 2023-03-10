@@ -36,7 +36,8 @@ public class UserStory6JIra extends Utility {
 
         robot.setAutoDelay(2000);
 
-        StringSelection stringSelection = new StringSelection("C:\\Users\\HP\\Pictures\\png.png");
+        //StringSelection stringSelection1 = new StringSelection("C:\\Users\\HP\\Pictures\\png.png");
+        StringSelection stringSelection = new StringSelection("C:\\Users\\HP\\IdeaProjects\\SaturdayProject_14th_Week\\src\\test\\java\\PNG\\png.png");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
         robot.setAutoDelay(1000);
         robot.keyPress(KeyEvent.VK_CONTROL);
