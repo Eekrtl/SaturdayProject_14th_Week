@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Suite">
+
+    <test name="testCaseTC_MI_P_02">
+
+        <classes>
+
+            <class name="PNG.UserStory6JIra"></class>
+
+        </classes>
+
+    </test>
+
+</suite>
